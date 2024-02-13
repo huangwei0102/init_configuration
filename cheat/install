@@ -1,0 +1,23 @@
+- Debian source for ustc:
+
+  deb http://mirrors.ustc.edu.cn/debian bullseye main
+  deb http://mirrors.ustc.edu.cn/debian bullseye-updates main
+  deb http://mirrors.ustc.edu.cn/debian-security bullseye-security main
+  deb http://mirrors.ustc.edu.cn/debian bullseye-backports main
+
+- Python pip:
+
+  https://bootstrap.pypa.io/get-pip.py
+  https://bootstrap.pypa.io/pip/2.7/get-pip.py
+
+- Public key:
+
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJ7vNox06KpbNbdzlO8j3u4IfjsAvNKkeOWE9GSvhhsbPE5P1lhBALUkT4G8b5jZawR/7BsTiAzIUJghaBkPMy7RuGHKE3kMIeWhMcarjdEyT1hSTv68pmGEALHHwqFwgTKWEkvFCid5OHLUVnhenReRFglP8/X8ucIEN3JwyzS2ZrOGrVlXXrAbirV7GtkSOHQg1G5vObesizwz0L0JeyHnEFASv2wDnqCcZs3w9ymyuPmYV5qEFwx1/+50aVDrI+GSG/sErv/H9bJ2PdT96/UXcIVEe8CKz59PNIQEc4HUm5oxQ9nYkYOm7HgRnM6FJSCszU66RyCwz4z+SKQjTHzo0eeXBaMgxREJVqCGTrcENPfnBHpoMjdr7SRKmDd2HbvuKme/tsWCFJsXaZH+/qoCiaL9HAKO8bcOeqofZIct/FinCg4ZuU1BIvi1QCuHjNqv/PxbGkYDMxpGdNGlcAYTxvmFs9CXDq568NWSGMeYz7xSUH3p3Q0Tf0T+KztyTjRU+IDHoZEi4MPAx3cel8/8hPWODiCjFBUTC4mGbkihGWKv9uJODSg+2CnXkMPwzR7FpD90Kb/NlYj4UGMHjKTzUkUYItAxQEJixH6r+TXbw/i4QjnBbfGtG/tC3JWF26Zh23au/ALlp5UqMLWCJBGCM4kwiq+Gd4ZjIdyKHxNQ== 569446624@qq.com
+
+- Build Packages:
+
+  sudo apt-get install build-essential automake autoconf make pkg-config 
+  sudo apt-get install libncursesw5-dev libncurses5-dev libssl-dev libevent-dev
+  sudo apt-get install libuv1-dev libev-dev python2-dev python3-dev swig
+
+
