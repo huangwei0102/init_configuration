@@ -52,7 +52,6 @@ copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "*.conf"
 copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "*.zsh"
 copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "*.lua"
 copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "*.py"
-copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "inputrc"
 
 # Special case: Copy all files in the directory if the directory exists
 copy_if_exists "$SCRIPTPATH/../tools/bin" "$HOME/.local/bin" "*"
