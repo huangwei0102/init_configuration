@@ -15,7 +15,7 @@ chmod 600 authorized_keys
 mkdir -p ~/.local/init
 cd ~/.local/init
 
-git clone git@github.com:huangwei0102/init_configuration.git
+git clone https://github.com/huangwei0102/init_configuration.git
 cd ~/.local/init/init_configuration
 sh update.sh
 
