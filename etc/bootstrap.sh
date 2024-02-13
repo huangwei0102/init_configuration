@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 # https://github.com/huangwei0102/init_configuration/blob/main/etc/bootstrap.sh
 set -e
 set -x

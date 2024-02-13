@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 SCRIPT=$(readlink -f "$0" || echo "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
