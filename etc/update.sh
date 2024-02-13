@@ -51,11 +51,11 @@ copy_config_files_and_directories() {
     local target_dir="$HOME"
 
     # Loop through each item in the source directory
-    for item in "$source_dir"/*; do
+    for item in "$source_dir"/* "$source_dir"/.*; do
         if [ -f "$item" ]; then
             # It's a file, copy directly to target directory
             cp "$item" "$target_dir"
-        elif [ -d "$item" ]; then
+        elif [ -d "$item" ] && [ "$(basename "$item")" != "." ] && [ "$(basename "$item")" != ".." ]; then
             # It's a directory, create corresponding directory in target and copy files
             local dir_name=$(basename "$item")
             mkdir -p "$target_dir/$dir_name"
