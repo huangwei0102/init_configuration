@@ -46,6 +46,25 @@ extract_tar_gz() {
     shopt -u nullglob
 }
 
+copy_config_files_and_directories() {
+    local source_dir="$SCRIPTPATH/../tools/conf"
+    local target_dir="$HOME"
+
+    # Loop through each item in the source directory
+    for item in "$source_dir"/*; do
+        if [ -f "$item" ]; then
+            # It's a file, copy directly to target directory
+            cp "$item" "$target_dir"
+        elif [ -d "$item" ]; then
+            # It's a directory, create corresponding directory in target and copy files
+            local dir_name=$(basename "$item")
+            mkdir -p "$target_dir/$dir_name"
+            cp "$item"/* "$target_dir/$dir_name/"
+        fi
+    done
+}
+
+
 # Use the defined function to copy files
 copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "*.sh"
 copy_if_exists "$SCRIPTPATH" "$HOME/.local/etc" "*.conf"
@@ -60,5 +79,7 @@ copy_if_exists "$SCRIPTPATH/../lib/python" "$HOME/.local/lib/python" "*"
 # Extract all .tar.gz files from $SCRIPTPATH/../tools/utils to $HOME
 extract_tar_gz "$SCRIPTPATH/../tools/utils" "$HOME"
 
+# copy config files and directories
+copy_config_files_and_directories
 
 
