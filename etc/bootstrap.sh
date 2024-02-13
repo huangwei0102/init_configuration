@@ -36,7 +36,8 @@ cd ~/.local/init
 
 git clone https://github.com/huangwei0102/init_configuration.git
 cd ~/.local/init/init_configuration/etc
-sh update.sh
+bash update.sh
+bash deploy_config.sh
 
 echo 'source ~/.local/etc/init.sh' >> ~/.bashrc
 echo 'umask 022' >> ~/.bashrc
