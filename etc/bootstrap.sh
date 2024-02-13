@@ -16,7 +16,7 @@ mkdir -p ~/.local/init
 cd ~/.local/init
 
 git clone https://github.com/huangwei0102/init_configuration.git
-cd ~/.local/init/init_configuration
+cd ~/.local/init/init_configuration/etc
 sh update.sh
 
 echo 'source ~/.local/etc/init.sh' >> ~/.bashrc
